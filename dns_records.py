@@ -7,7 +7,7 @@ This is the main file for this project.
 
 Copyright (C) 2012,  Haridas N <haridas.nss@gmail.com>
 
-IPmonitoring is free software: you can redistribute it and/or modify
+EmailAuth is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 any later version.
@@ -54,14 +54,16 @@ class DomainKey(object):
 
 class DKIM(object):
     """
-    Manages all operations related to the DKIM operation.
+    Manages all operations related to the DKIM key generation.
 
 
-    DKIM/DomainKey are both are simiar one. But DomainKey was the
-    implementation of Yahoo and it is pattented, but the DKIM is developed by
-    open standard commity, but due it resembles with DomainKye, it was sued
-    by Yahoo, and it still uncertain that some portions of DKIM still comes
-    under Yahoo patent specification.
+    DKIM/DomainKey are simiar one. But DomainKey was the
+    implementation of Yahoo and they has patent of it. The DKIM was
+    developed by an open standard commity. But due to its similarity with
+    DomainKye, Yahoo sued this Standard, and the dispute is not yet settled.
+
+    No need to worry about this state, already major ISP's are started to
+    adopt this protocol and implemented on their Email infrastructure.
 
     """
     def __init__(self, domain, selector="mailserver", key=None, key_pub=None,
